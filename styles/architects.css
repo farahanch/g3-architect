@@ -1,18 +1,15 @@
-/* google font - sans work */
-
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+
 .work-sans-font {
-    font-family: "Work Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
-/* SHARED STYLES */
-
-
-.display-flex { /* if use flex multiple times. make a class of flex. */
+/* shared styles */
+.display-flex{
     display: flex;
 }
 
@@ -20,26 +17,26 @@
     color: #FF900E;
 }
 
-/*dark-02*/
-.text-gray {
+/* dark 02 */
+.text-gray{
     color: #424242;
 }
 
-/*dark-03*/
-.text-light-gray {
+/* dark03 */
+.text-light-gray{
     color: #727272;
 }
 
-.bg-light {
+.bg-light{
     background-color: rgba(255, 144, 14, 0.1);
 }
 
-.btn-primary {
+.btn-primary{
     background-color: #FF900E;
     color: white;
     padding: 20px 25px;
     font-size: 1.25rem;
-    font-weight: 600; /*semi/demi bold*/
+    font-weight: 600;
     border-radius: 8px;
     border: none;
 }
@@ -49,70 +46,64 @@ main{
     margin: 0 auto;
 }
 
+main > section{
+    margin-top: 130px;
+}
+
 .section-title{
     font-size: 2.8rem;
     font-weight: 700;
 }
 
-main > section{
-    margin: 130px;
-}
+/* header styles */
 
-/* HEADER STYLES */
-
-
-/* NAVBAR RELATED STYLES */
-
-.navbar {
+/* navbar related styles */
+.navbar{
     justify-content: space-between;
     align-items: center;
 }
 
-.brand {
-    font-weight: 700; /*bold*/
-    font-size: 3rem; /*instead of px, using rem. because its responsive. 1em=16px.*/
+.brand{
+    font-weight: 700;
+    font-size: 3rem;
 }
-
-.nav-item {
+.nav-item{
     list-style: none;
     margin-right: 30px;
 }
 
-.nav-link {
+.nav-link{
     text-decoration: none;
-    font-size: 18px;
     font-weight: 500;
-    /*semi-bold*/
 }
 
-.navbar, .banner {
+.navbar, .banner{
     max-width: 1440px;
-    margin: 0 auto; /* this margin for smaller device. made it center align. no space left left right. */
+    margin: 0 auto;
 }
 
-/* BANNER RELATED STYLES */
-
-.banner-content {
+/* banner related styles */
+.banner-content{
     max-width: 850px;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 50px;
 }
 
-.banner-title {
+.banner-title{
     font-weight: 700;
     font-size: 4rem;
 }
 
-.banner-img {
+.banner-image{
     width: 100%;
 }
 
-/* TEAM AND FEATURE RELATED STYLES */
-
+/* team and feature related styles */
 .teams{
     align-items: center;
 }
+
 .team-img-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -128,22 +119,62 @@ main > section{
     font-weight: 500;
 }
 
-/* SOME FACTS RELATED STYLES */
+/* features section related styles */
 
-.facts-container{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-   
+.features{
+    gap: 140px;
+    
 }
 
+#feature-section-title{
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+
+.feature-card{
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+}
+
+.feature-card .feature-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#experience-badge{
+    padding: 45px 42px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+
+#experience-year{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.featured-architect img{
+    width: 100%;
+}
+
+/* some facts related styles */
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
 .fact-card{
     border: 1px solid #FF900E;
     width: 240px;
     height: 240px;
     border-radius: 8px;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
 
 .fact-number{
@@ -156,14 +187,15 @@ main > section{
 .fact-name{
     font-size: 1.25rem;
     font-weight: 600;
+    margin-top: 10px;
 }
 
 .fact-description{
     max-width: 540px;
 }
 
-/* SPONSOR RELATED STYLES */
 
+/* sponsor related styles */
 .sponsor-info{
     max-width: 540px;
     margin: 50px auto;
@@ -172,16 +204,32 @@ main > section{
 
 .sponsor-companies{
     display: grid;
-    grid-template-columns: repeat(5, 1fr)
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .sponsor-companies img{
     filter: grayscale(100%);
 }
 
-/* RESPONSIVE MEDIA QUERY - SMALL DEVICE */
+/* footer section styles */
 
-@media screen and (max-width: 575px){
+.site-footer {
+    background-color: #fff4e7; /* light peach tone */
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 30px 0; /* top & bottom padding */
+    text-align: center;
+    font-size: 1rem;
+    color: #727272;
+    max-width: 1440px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+
+/* responsive media query */
+@media screen and (max-width: 576px) {
     .navbar, 
     .nav-links, 
     .features,
@@ -209,12 +257,16 @@ main > section{
     .our-features{
         margin-left: 20px;
     }
+
+    #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
 }
 
-/* MEDIUM DEVICE */
-
-@media screen and (min-width: 576px) and (max-width:  992px) {
-     .teams, .features{
+/* medium size device */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .teams, .features{
         flex-direction: column;
     }
     .our-features{
@@ -225,5 +277,10 @@ main > section{
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
         justify-items: center;
+    }
+
+    #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
     }
 }
